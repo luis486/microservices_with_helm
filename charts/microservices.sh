@@ -3,7 +3,7 @@
 # Te paras en esta carpeta charts y le das ./microservices.sh 
 
 # Directorio donde se encuentran los charts
-CHARTS_DIR="/mnt/d/luism/OneDrive/Escritorio/'Noveno Semestre'/'Sistemas Distribuidos'/microservices_with_helm/charts"
+CHARTS_DIR="/mnt/d/luism/OneDrive/Escritorio/Noveno Semestre/Sistemas Distribuidos/microservices_with_helm/charts"
 
 # Lanzar el despliegue de cada chart
 helm install auth-api "$CHARTS_DIR/auth-api"

@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources: 
+  - services.yaml
+  - zipkin.yaml
+  - redis-queue.yaml
+  - log-message.yaml
+  - todos-api.yaml
+  - users-api.yaml
+  - auth-api.yaml
+  - frontend.yaml

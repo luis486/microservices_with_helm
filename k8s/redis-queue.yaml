@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-queue
+  namespace: distribuidos  
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: redis-queue
+  template:
+    metadata:
+      labels:
+        app: redis-queue
+    spec:
+      containers:
+      - name: redis-queue
+        image: redis:latest # Cambia a tu imagen y etiqueta específicas
+        ports:
+        - containerPort: 6379

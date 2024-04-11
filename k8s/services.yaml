@@ -1,0 +1,109 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: distribuidos
+spec:  
+  selector:
+    app: frontend
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080  # Puerto expuesto por el contenedor del frontend
+  type: LoadBalancer
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: auth-api
+  namespace: distribuidos
+spec:
+  selector:
+    app: auth-api
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000  # Puerto expuesto por el contenedor del frontend
+  type: ClusterIP
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: log-message
+  namespace: distribuidos
+spec:
+  selector:
+    app: log-message
+  ports:
+    - protocol: TCP
+      port: 6029
+      targetPort: 6029  # Puerto expuesto por el contenedor del frontend
+  type: ClusterIP
+  
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-queue
+  namespace: distribuidos
+spec:
+  selector:
+    app: redis-queue
+  ports:
+    - protocol: TCP
+      port: 6379
+      targetPort: 6379  # Puerto expuesto por el contenedor del frontend
+  type: ClusterIP
+  
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: todos-api
+  namespace: distribuidos
+spec:
+  selector:
+    app: todos-api
+  ports:
+    - protocol: TCP
+      port: 8082
+      targetPort: 8082  # Puerto expuesto por el contenedor del frontend
+  type: ClusterIP
+  
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: users-api
+  namespace: distribuidos
+spec:
+  selector:
+    app: users-api
+  ports:
+    - protocol: TCP
+      port: 8083
+      targetPort: 8083  # Puerto expuesto por el contenedor del frontend
+  type: ClusterIP
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: zipkin
+  namespace: distribuidos
+spec:
+  selector:
+    app: zipkin
+  ports:
+    - protocol: TCP
+      port: 9411
+      targetPort: 9411  # Puerto expuesto por el contenedor del frontend
+  type: ClusterIP
+  

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: log-message
+  namespace: distribuidos  
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: log-message
+  template:
+    metadata:
+      labels:
+        app: log-message
+    spec:
+      containers:
+      - name: log-message
+        image: luis486/log-message:latest # Cambia a tu imagen y etiqueta específicas
+        ports:
+        - containerPort: 6029

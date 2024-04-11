@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: distribuidos  
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: luis486/frontend:latest  # Cambia a tu imagen y etiqueta específicas
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: AUTH_API_ADDRESS
+          value: http://auth-api:8000
+        - name: TODOS_API_ADDRESS
+          value: http://todos-api:8082
+
+
+        

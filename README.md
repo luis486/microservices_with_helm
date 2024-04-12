@@ -22,7 +22,11 @@ Como se ha venido aprendiendo en el curso de Kubernetes, ya sabemos desplegar un
 
 ![image](https://github.com/luis486/microservices_with_helm/assets/71047563/6f838626-3f62-42c6-8df8-db2ad2538bac)
 
+**values.yaml**
+
 ![image](https://github.com/luis486/microservices_with_helm/assets/71047563/8ed9e1e8-ac4a-42cf-a636-eb52cfb6e0c9)
+
+**deployment.yaml**
 
 ![image](https://github.com/luis486/microservices_with_helm/assets/71047563/366e6ce8-10fd-4cf4-a992-971baee908e8)
 
@@ -61,4 +65,6 @@ Te debe quedar algo así.
       ![image](https://github.com/luis486/microservices_with_helm/assets/71047563/348e8bb3-1ea2-4648-9f13-92e5de7bd965)
 
 
-#### Si definitivamente no te funciona, tranquilo, hay mejores áreas para tí, estoy seguro :)
+**Ten en cuenta que hay cosas que debes ignorar porque no es necesario para este trabajo, como el index.yaml y los .tgz (que son versions de la app guardadas)**
+
+**Si definitivamente no te funciona, tranquilo, hay mejores áreas para tí, estoy seguro :)**

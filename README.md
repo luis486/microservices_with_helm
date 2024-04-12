@@ -24,6 +24,8 @@ Como se ha venido aprendiendo en el curso de Kubernetes, ya sabemos desplegar un
 
 ![image](https://github.com/luis486/microservices_with_helm/assets/71047563/8ed9e1e8-ac4a-42cf-a636-eb52cfb6e0c9)
 
+![image](https://github.com/luis486/microservices_with_helm/assets/71047563/366e6ce8-10fd-4cf4-a992-971baee908e8)
+
 ### Nota: Recuerda hacer esto con cada uno de los microservicios
 
 ![image](https://github.com/luis486/microservices_with_helm/assets/71047563/f0b6071f-aada-4eb0-86df-aa1658005557)
